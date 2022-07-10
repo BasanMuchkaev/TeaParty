@@ -1,0 +1,64 @@
+<script defer src="/js/addcomment.js"></script>
+<script defer src="/js/deleteComments.js"></script>
+
+<div class="main-2">
+
+    <div class="mainTeaImgDiv">
+        <img class="mainTeaImg" src="{{tea.img}}" alt="main tea image">
+    </div>
+
+    <div class="teaContent">
+        <div class="headline-1">
+            <h1 class="h1-card">{{tea.title}}</h1>
+            <h5 class="h5-tea">Тип чая</h5>
+            <div class="line"></div>
+            <h5>Описание и заваривание</h5>
+            <span class="description">{{tea.description}}</span>
+        <h5>Комментарии</h5>
+        <div class="line"></div>
+        </div>
+        
+        <ul class="comments">
+        {{#each tea.Comments}}
+            <li data-commentid="{{this.id}}" class="comment">
+                <div class="comment-header">
+                <h6>{{this.User.name}}</h6>
+                {{#if admin}}
+                <img id="btnDeleteComment" src="/img/delete_2_line.svg" alt="delete comment">
+                {{/if}}
+                </div>
+                <span class="description">{{this.post}}</span>
+            </li>
+        {{/each}}
+        </ul>
+        {{#if userName}}
+        <div class="comment-footer">
+            <button id="addComment" type="button" class="secondBtn" data-bs-toggle="modal" data-bs-target="#addComent">Добавить комментарий</button>
+        </div>
+        {{/if}}
+        
+    </div>
+</div>
+
+
+<!-- Modal add comments -->
+
+<div class="modal fade" id="addComent" tabindex="-1" aria-labelledby="modalAddComents" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="main">
+    <div class="boxAuth">
+    <div class="btnClose">
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <h4 class="h4-black">Оставить комментарий</h4>
+    <form id="teaid" data-id={{tea.id}} name="addComents" class="formDiv" method="post" action="/lk">
+        <textarea type="text" class="input-text" name="post" tabindex="2" placeholder="Напищите свое мнение о чае, нам очень интересно" ></textarea>         
+        <button type="submit" class="mainBtn-2">Добавить</button>
+    </form>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>

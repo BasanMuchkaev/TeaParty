@@ -1,0 +1,621 @@
+/* Resetting all browser styles */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;	
+	}
+	*,*:before,*:after{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	:focus,:active{outline: none;}
+	a:focus,a:active{outline: none;}
+	
+nav,footer,header,aside{display: block;}
+
+html,body{
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 14px;
+		-ms-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+    font-family: 'Ubuntu', sans-serif;
+	}
+
+input,button,textarea{font-family: inhetit;}
+
+input::-ms-clear{display: none;}
+	button{cursor: pointer;}
+	button::-moz-focus-inner {padding: 0; border: 0;}
+	a, a:visited{text-decoration: none;}
+	ul li{list-style: none;}
+	img{vertical-align: top;}
+
+/* Create new styles */
+
+/* Style 
+#F3FCF7 - Light green
+#06C167 - Main green
+#08ad5d - Dark green
+*/
+
+#conteiner{
+  height: 100%;
+}
+
+/* Main */
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#about{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  background-image: url('/img/background.jpg'); 
+  background-repeat: no-repeat; 
+  background-position: right;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#headline{
+  max-width: 600px;
+  max-height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-weight: 700;
+  text-align: center;
+  color: #F3FCF7;
+  font-size: 34pt;
+  padding: 5px 0px;
+}
+
+.h4-light{
+  font-weight: 500;
+  text-align: center;
+  color: #F3FCF7;
+  font-size: 18pt;
+  padding: 10px 0px 20px 0px;
+}
+
+.h4-black{
+  font-weight: 500;
+  text-align: center;
+  color: black;
+  font-size: 18pt;
+  padding: 10px 0px 20px 0px;
+}
+
+#subline-text{
+  max-width: 600px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2{
+  text-align: center;
+  margin: auto;
+}
+
+#map{
+  margin: auto;
+  width: 100%;
+  height: 800px;
+  background-color: bisque;
+}
+
+
+/* Header */
+
+#header{
+  width: 100%;
+  margin: auto;
+  padding: 0px 40px;
+  height: 70px;
+  background-color: #F3FCF7;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo{
+  margin: auto 20px;
+}
+
+#logoImg{
+  height: 40px;
+  width: 100px;
+}
+
+.navLi{
+  padding: 10px;
+  font-size: 12pt;
+}
+
+.navLi:hover{
+  color: #08ad5d;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navPart{
+  display: flex;
+  margin: auto 0px;
+  align-items: center;
+}
+
+.navInside{
+  display: flex;
+  margin: auto 0px;
+  align-items: center;
+}
+
+.mainBtn{
+  max-width: 100%;
+  height: 40px;
+  padding: 0px 20px;
+  background-color: #06C167;
+  border-radius: 20px;
+  color: #F3FCF7;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+.mainBtn:hover{
+  background-color: #08ad5d;
+  letter-spacing: 1px;
+}
+
+.mainBtn-2{
+  max-width: 100%;
+  height: 40px;
+  margin: 20px 0px;
+  padding: 0px 20px;
+  background-color: #06C167;
+  border-radius: 20px;
+  color: #F3FCF7;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+.mainBtn-2:hover{
+  background-color: #08ad5d;
+  letter-spacing: 1px;
+}
+
+.secondBtn{
+  display: inline-block;
+  min-width: 80px;
+  height: 40px;
+  border: 2px solid #06C167;
+  background-color: #F3FCF7;
+  border-radius: 20px;
+  color: #06C167;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+.secondBtn:hover{
+  border: 2px solid #08ad5d;
+  letter-spacing: 1px;
+}
+
+.txtBtn{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+  background-color: #F3FCF7;
+}
+
+.txtBtn:hover{
+  color: #06C167;
+  letter-spacing: 1px;
+}
+
+.txtBtn-2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10pt;
+  background-color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.txtBtn-2:hover{
+  color: #06C167;
+  letter-spacing: 1px;
+}
+
+
+/* Footer */
+
+#footer{
+  width: 100%;
+  margin: auto;
+  padding: 0px 80px;
+  height: 150px;
+
+  background-color: #F3FCF7;
+  display: flex;
+  justify-content: center;
+}
+
+.textSpan{
+  margin: auto 0px;
+  padding: 30px 0px 10px 0px;
+  font-size: 10pt;
+  color: rgb(30, 30, 30);
+}
+
+.textSpan-2{
+  margin: auto 0px;
+  font-size: 10pt;
+  color: rgb(30, 30, 30);
+}
+
+#youtube:hover{
+  content: url('/img/youtube_fill.svg');
+}
+
+#telegram:hover{
+  content: url('/img/telegram_fill.svg');
+}
+
+#vk:hover{
+  content: url('/img/vkontakte_fill.svg');
+}
+
+#map {
+  width: 80%;
+  height: 700px;
+}
+
+/* Auth */
+.modal-dialog{
+  width: 440px;
+  height: auto;
+}
+
+.boxAuth{
+width: 380px;
+height: auto;
+margin: auto;
+padding: 20px 10px 20px 10px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+.formDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnClose{
+ align-self: flex-end;
+}
+
+.inputDiv{
+  padding: 10px 0px;
+  
+}
+
+.label{
+  font-size: 12pt;
+}
+
+.input{
+  display: block;
+  flex: 1 1 auto; 
+  height: 45px;
+  width: 360px;
+  min-width: 290px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  border: 1px solid rgb(160, 160, 160) ;
+  padding: 15px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(190, 190, 190);
+  opacity: 1; /* Firefox */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 200;
+  font-size: 12pt;
+}
+
+.input[type="email"] {
+  font-family: 'Ubuntu', sans-serif;
+  font-size:12pt;
+  color: rgb(80, 80, 74);
+}
+
+.input[type="text"] {
+  font-family: 'Ubuntu', sans-serif;
+  font-size:12pt;
+  color: rgb(80, 80, 74);
+}
+
+/* TeaView */
+
+.main-2{
+  margin: auto;
+  display: flex;
+  width: 80%;
+  min-height: 80vh;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainTeaImgDiv{
+  width: 50%;
+  height: 400px;
+  padding: 20px;
+}
+
+.mainTeaImg{
+  max-width: 100%;
+  min-width: 90%;
+}
+
+.teaContent{
+  width: 50%;
+  padding: 40px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headline-1{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: auto;
+  margin: 0px 0px 20px 0px;
+}
+
+.h1-card{
+  font-weight: 700;
+  text-align: left;
+  height: auto;
+  color: #06C167;
+  font-size: 34pt;
+  line-height: 90%;
+}
+
+.h5-tea{
+  font-weight: 500;
+  color: black;
+  font-size: 14pt;
+}
+
+.line{
+  width: 40px;
+  height: 2px;
+  background-color: #06C167;
+}
+
+h5{
+  margin: 25px 0px 10px 0px;
+  font-size: 18pt;
+  font-size: 700;
+  color: rgb(80, 80, 80);
+}
+
+.description{
+  max-width: 550px;
+  font-size: 12pt;
+  color: rgb(50, 50, 50);
+  line-height: 130%;
+}
+
+.comments{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comment{
+  width: 500px;
+  margin: 5px 0px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(190, 190, 190);
+  background-color: white;
+}
+
+/* Comments */
+
+h6{
+  margin: 5px 0px 10px 0px;
+  font-size: 12pt;
+  font-size: 700;
+  color: rgb(50, 50, 50);
+}
+
+.comment-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+}
+
+#btnDeleteComment:hover{
+  content: url('/img/delete_2_fill.svg');
+}
+
+.comment-footer{
+  display: inline;
+  margin: 20px 0px 20px 25px;
+}
+
+.input-text{
+  height: 200px;
+  width: 360px;
+  min-width: 290px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  border: 1px solid rgb(160, 160, 160) ;
+  padding: 15px;
+  rows: 15;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(190, 190, 190);
+  opacity: 1; /* Firefox */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 200;
+  font-size: 12pt;
+}
+
+.input-text[type="text"] {
+  font-family: 'Ubuntu', sans-serif;
+  font-size:12pt;
+  color: rgb(80, 80, 74);
+}
+
+#addComment{
+  width: 220px;
+}
+
+
+/* LK */
+
+.lk-tea{
+  min-width: 60%;
+  max-height: 80vh;
+
+}
+
+.lk-coment{
+  width: 540px;
+  max-height: 80vh;
+  /* background-color: rgb(240, 240, 240); */
+}
+
+#lk-header{
+  padding: 0px 0px 0px 30px;
+}
+
+.lk-commentList{
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.headline-2{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
+  margin: 0px 0px 20px 0px;
+  align-items: flex-end;
+}
+
+.tea-list{
+  max-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow-y: auto;
+}
+
+.card {
+  margin: 10px;
+  position: relative;
+  max-width: 260px;
+  height: 350px;
+}
+
+.card-title {
+ 
+  display: block;
+  
+  text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:12pt;
+  color: rgb(30, 30, 30);
+  padding: 2% 5%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.p-card{
+  display: block;
+  max-width: 260px;
+  height: 350px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-desc {
+  display: block;
+  width: 260px;
+  height: 350px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10pt;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 15px 15px 35px 15px;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.4s ease;
+  
+}
+
+.card:hover .card-desc {
+  opacity: 1;
+  height: 350px;
+}
+
+#btnSettingTea{
+  width: 24px;
+  height: 24px;
+}
+
+#btnSettingTea:hover{
+  content: url(/img/settings_3_fill.svg);
+}
+
+#btnDeleteTea{
+  width: 24px;
+  height: 24px;
+}
+
+#btnDeleteTea:hover{
+  content: url('/img/delete_2_fill.svg');
+}
+
+.card-icon{
+  display: flex;
+  justify-content: end;
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    
+  height: 34px;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+ 
+}

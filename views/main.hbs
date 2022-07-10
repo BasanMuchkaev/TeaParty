@@ -1,0 +1,21 @@
+<div id="main">
+  <script defer src="./js/yandexMap.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=280b2979-6b8d-4af4-aa1d-5df8ed0eac60&lang=ru_RU" type="text/javascript"></script>
+
+  <div id="about">
+    <div id="headline">
+      <div id="headline-text">
+        <h1>Место, где люди и чай находят друг друга </h1>
+        <h4 class="h4-light">Выбирайте любимые чаи и делитесь комментариями</h4>
+      </div>
+    {{#if userName}}
+    {{else}} 
+      <button class="mainBtn" data-bs-toggle="modal" data-bs-target="#modalRegistr">Зарегестрироваться</button>
+    {{/if}} 
+    </div>
+  </div>
+   <div id="subline-text">
+        <h2>Чайная карта</h2>
+      </div>
+  <div id="map"></div>
+</div>

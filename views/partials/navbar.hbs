@@ -1,0 +1,88 @@
+<script defer src="/js/registr.js"></script>
+
+<div id="header">
+  <a id="logo" href="/">
+    <img id="logoImg" src="/img/logo.png" alt="teaList logo">
+  </a>
+  {{#if userName}}
+  <div class="navInside">
+    <a href="/lk"><button class="txtBtn">Личный кабинет</button></a>
+  </div>
+  {{/if}}
+  <ul class="navPart">
+    {{#if userName}}
+    <li class="navLi">Привет, {{userName}}</li>
+    <li class="navLi"><button id="logout" class="secondBtn">Выйти</button></li>
+    {{else}}
+    <li class="navLi"><button type="button" class="txtBtn" data-bs-toggle="modal"
+        data-bs-target="#modalAuth">Войти</button></li>
+    <li class="navLi"><button class="mainBtn" data-bs-toggle="modal" data-bs-target="#modalRegistr">Регистрация</button>
+    </li>
+    {{/if}}
+  </ul>
+  </nav>
+</div>
+
+<!-- Modal Auth-->
+<div class="modal fade" id="modalAuth" tabindex="-1" aria-labelledby="modalAuth" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="main">
+        <div class="boxAuth">
+          <div class="btnClose">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <h4 class="h4-black">Вход</h4>
+          <form name="auth" class="formDiv">
+            <div class="inputDiv">
+              <label for="inputEmailAuth" class="form-label">Почта</label>
+              <input name="emailAuth" type="email" class="input" placeholder="example@example.com" id="inputEmailAuth">
+            </div>
+            <div class="inputDiv">
+              <label for="inputPasswordAuth" class="form-label">Пароль</label>
+              <input name="passwordAuth" type="password" class="input" placeholder="********" id="inputPasswordAuth">
+            </div>
+            <button type="submit" class="mainBtn">Войти</button>
+          </form>
+          <span class="textSpan">Нет аккаунта? <button class="txtBtn-2" data-bs-toggle="modal" data-bs-target="#modalRegistr">Зарегестрируйтесь</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Registr-->
+<div class="modal fade" id="modalRegistr" tabindex="-1" aria-labelledby="modalregistr" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="main">
+        <div class="boxAuth">
+          <div class="btnClose">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <h4 class="h4-black">Регистрация</h4>
+          <form name="registr" class="formDiv">
+
+            <div class="inputDiv">
+              <label for="inputNameRegistr" class="form-label">Имя</label>
+              <input name="inputNameRegistr" type="text" class="input" placeholder="John Snow" id="inputNameRegistr">
+            </div>
+
+            <div class="inputDiv">
+              <label for="inputEmailRegistr" class="form-label">Почта</label>
+              <input name="emailRegistr" type="email" class="input" placeholder="example@example.com" id="exampleEmailRegistr">
+            </div>
+
+            <div class="inputDiv">
+              <label for="inputPasswordRegistr" class="form-label">Пароль</label>
+              <input name="passwordRegistr" type="password" class="input" placeholder="********" id="inputPasswordRegistr">
+            </div>
+
+            <button type="submit" class="mainBtn">Зарегестрироваться</button>
+          </form>
+          <span class="textSpan">Уже есть акаунт? Тогда <button type="button" class="txtBtn-2" data-bs-toggle="modal" data-bs-target="#modalAuth">войдите</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

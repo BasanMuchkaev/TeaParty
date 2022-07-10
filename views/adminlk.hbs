@@ -1,0 +1,99 @@
+<script defer src="./js/addTea.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=280b2979-6b8d-4af4-aa1d-5df8ed0eac60&lang=ru_RU" type="text/javascript"></script>
+
+<div class="main-2">
+  <!-- Левая часть — каталог чаев -->
+  <div class="lk-tea">
+    <div class="headline-2">
+      <div>
+        <h5>Каталог чаев</h5>
+        <div class="line"></div>
+      </div>
+      {{#if admin}}
+      <button type="button" class="mainBtn" data-bs-toggle="modal" data-bs-target="#addTea">
+        Добавить чай </button>
+      {{/if}}
+    </div>
+
+    <!-- Список чаев -->
+    <ul class="tea-list">
+      {{#each data}}
+      <li data-teaId="{{this.id}}" class="card">
+        <h2 class="card-title">{{this.title}}</h2>
+
+        <img src="{{this.img}}" alt="{{this.title}}">
+        <div class="card-desc">
+          <!-- Блок с кнопками> -->
+          
+          <div class="card-icon">
+            <!-- <img id="btnSettingTea" src="/img/settings_3_line.svg" alt="edit tea"> -->
+            <img id="btnDeleteTea" src="/img/delete_2_line.svg" alt="delete tea">
+        </div>
+       
+        <p class="p-card">{{this.description}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{#if admin}}
+  <!-- Правая часть — список отзывов -->
+  <div class="lk-coment">
+    <div id="lk-header" class="headline-1">
+      <h5>Последние комментарии</h5>
+      <div class="line"></div>
+    </div>
+
+    <!-- Список отзывов -->
+    <ul class="lk-commentList">
+      {{#each comment}}
+      <li data-commentid="{{this.id}}" class="comment">
+        <div class="comment-header">
+          <h6>{{this.User.name}}</h6>
+          <img id="btnDeleteComment" src="/img/delete_2_line.svg" alt="delete comment">
+        </div>
+        <span class="description">{{this.post}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+</div>
+
+
+<!-- Modal Add tea -->
+
+<div class="modal fade" id="addTea" tabindex="-1" aria-labelledby="maddTea" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="main">
+        <div class="boxAuth">
+          <div class="btnClose">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <h4 class="h4-black">Добавить чай</h4>
+          <form name="addTea" class="formDiv">
+            <div class="inputDiv">
+              <label for="sortoftea" class="form-label">Сорт чая</label>
+              <input placeholder="Например, Да Хун Пао" name="title" type="text" class="input" id="sortoftea">
+            </div>
+            <div class="inputDiv">
+              <label for="describe" class="form-label">Описание и заваривание</label>
+              <textarea id="describe" type="text" class="input-text" name="description" placeholder="Опишите вкус чая и способ приготовления"></textarea>
+            </div>
+            <div class="inputDiv">
+              <label for="born" class="form-label">Где выращивают</label>
+              <input name="location" type="text" class="input" id="born" placeholder="Например, Фудзиань">
+            </div>
+            <div class="inputDiv">
+              <label for="img" class="form-label">Ссылка на изображение</label>
+              <input name="img" type="text" class="input" id="img">
+            </div>
+            <button type="submit" class="mainBtn">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
